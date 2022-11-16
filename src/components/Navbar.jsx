@@ -1,10 +1,7 @@
 import React from "react";
-import { useRouter } from "next/router";
 import Link from "next/link";
 
 const Navbar = () => {
-  const router = useRouter();
-
   const menus = [
     {
       label: "Home",
@@ -37,9 +34,9 @@ const Navbar = () => {
         {menus.map((menu, index) => (
           <li>
             <Link
+              key={index}
               href={menu.href}
               className={`hover:bg-text-gradient-primary`}
-              className={router.pathname === menu.href ? "active" : ""}
             >
               {menu.label}
             </Link>
