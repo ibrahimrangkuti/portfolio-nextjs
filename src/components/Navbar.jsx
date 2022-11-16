@@ -1,4 +1,5 @@
 import React from "react";
+import { AiOutlineMenu } from "react-icons/ai";
 import Link from "next/link";
 
 const Navbar = () => {
@@ -43,6 +44,7 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
+      <AiOutlineMenu size={26} className="md:hidden cursor-pointer" />
     </div>
   );
 };
