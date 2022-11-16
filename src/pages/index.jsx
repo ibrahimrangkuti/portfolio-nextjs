@@ -7,7 +7,7 @@ const index = () => {
     <>
       <div className="flex flex-col space-y-6 md:space-y-0 md:flex-row items-center justify-between mt-16 mb-16">
         <div className="w-full md:w-[500px]">
-          <span className="text-sm">Hello 👋 I'am</span>
+          <span className="text-base">Hello 👋 I'am</span>
           <h1 className="text-4xl font-semibold bg-text-gradient-primary">
             Ibrahim Rangkuti
           </h1>
