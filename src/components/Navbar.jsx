@@ -27,17 +27,16 @@ const Navbar = () => {
       <div className="max-w-[800px] mx-auto my-8 px-4 md:px-0">
         <div className="flex justify-between">
           <div>
-            <a href="/">
+            <Link href="/">
               <h1 className="font-semibold text-2xl bg-text-gradient-primary">
                 Rangkuti.
               </h1>
-            </a>
+            </Link>
           </div>
           <ul className="hidden md:flex space-x-6 text-base">
             {menus.map((menu, index) => (
-              <li>
+              <li key={index}>
                 <Link
-                  key={index}
                   href={menu.href}
                   className={`hover:bg-text-gradient-primary`}
                 >
