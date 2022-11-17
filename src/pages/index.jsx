@@ -47,7 +47,7 @@ const index = () => {
           <Image
             src="/images/myphoto.jpg"
             alt=""
-            className="md:w-[130px] rounded-lg shadow-lg"
+            className="md:w-[130px] rounded-lg shadow-lg dark:md:rotate-45 transition-all duration-500"
             width={500}
             height={500}
           />
