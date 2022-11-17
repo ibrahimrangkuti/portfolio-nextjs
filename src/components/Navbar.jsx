@@ -1,9 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
+import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useTheme } from "next-themes";
 
 const Navbar = () => {
+  const ThemeChanger = () => {
+    const { theme, setTheme } = useTheme();
+    if (theme === "light") {
+      return (
+        <BsFillMoonFill
+          className="cursor-pointer"
+          size={20}
+          onClick={() => setTheme("dark")}
+        />
+      );
+    } else {
+      return (
+        <BsFillSunFill
+          className="cursor-pointer"
+          size={20}
+          onClick={() => setTheme("light")}
+        />
+      );
+    }
+  };
+
   const menus = [
     {
       label: "Home",
@@ -52,7 +75,10 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <AiOutlineMenu size={26} className="md:hidden cursor-pointer" />
+          <div className="flex space-x-2 items-center">
+            <ThemeChanger />
+            <AiOutlineMenu size={26} className="md:hidden cursor-pointer" />
+          </div>
         </div>
       </div>
     </div>
