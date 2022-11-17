@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { FaHtml5, FaCss3Alt, FaBootstrap, FaLaravel } from "react-icons/fa";
 
 const ruangseni = () => {
@@ -12,10 +13,17 @@ const ruangseni = () => {
         width={1200}
         height={1200}
       />
-      <div className="my-4">
-        <h1 className="text-2xl font-semibold bg-text-gradient-primary">
-          RuangSeni
-        </h1>
+      <div className="my-4 mt-6">
+        <div className="flex items-center justify-between space-x-4">
+          <h1 className="text-2xl font-semibold bg-text-gradient-primary">
+            RuangSeni
+          </h1>
+          <Link href={"https://github.com/ibrahimrangkuti/ruangseni-backend"}>
+            <span className="text-gray-300 text-sm underline italic">
+              Go to the repository!
+            </span>
+          </Link>
+        </div>
         <p className="my-4 text-slate-500">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, harum?
           Alias dolores illum nihil quasi voluptatum labore maiores. Itaque
