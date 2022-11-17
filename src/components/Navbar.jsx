@@ -23,28 +23,32 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="flex justify-between">
-      <div>
-        <a href="/">
-          <h1 className="font-semibold text-2xl bg-text-gradient-primary">
-            Rangkuti.
-          </h1>
-        </a>
+    <div className="border-b border-slate-200">
+      <div className="max-w-[800px] mx-auto my-8 px-4 md:px-0">
+        <div className="flex justify-between">
+          <div>
+            <a href="/">
+              <h1 className="font-semibold text-2xl bg-text-gradient-primary">
+                Rangkuti.
+              </h1>
+            </a>
+          </div>
+          <ul className="hidden md:flex space-x-6 text-base">
+            {menus.map((menu, index) => (
+              <li>
+                <Link
+                  key={index}
+                  href={menu.href}
+                  className={`hover:bg-text-gradient-primary`}
+                >
+                  {menu.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <AiOutlineMenu size={26} className="md:hidden cursor-pointer" />
+        </div>
       </div>
-      <ul className="hidden md:flex space-x-6 text-base">
-        {menus.map((menu, index) => (
-          <li>
-            <Link
-              key={index}
-              href={menu.href}
-              className={`hover:bg-text-gradient-primary`}
-            >
-              {menu.label}
-            </Link>
-          </li>
-        ))}
-      </ul>
-      <AiOutlineMenu size={26} className="md:hidden cursor-pointer" />
     </div>
   );
 };
