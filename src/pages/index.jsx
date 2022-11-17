@@ -2,6 +2,7 @@ import React from "react";
 import { FaGithub, FaInstagram, FaEnvelope } from "react-icons/fa";
 import PinnedPost from "../components/PinnedPost";
 import Image from "next/image";
+import Link from "next/link";
 
 const index = () => {
   return (
@@ -22,18 +23,24 @@ const index = () => {
             <a href="" className="btn-gradient-primary">
               Contact Me
             </a>
-            <FaGithub
-              size={20}
-              className="cursor-pointer opacity-50 hover:opacity-100"
-            />
-            <FaInstagram
-              size={20}
-              className="cursor-pointer opacity-50 hover:opacity-100"
-            />
-            <FaEnvelope
-              size={20}
-              className="cursor-pointer opacity-50 hover:opacity-100"
-            />
+            <Link href={"https://github.com/ibrahimrangkuti"} target={"blank"}>
+              <FaGithub
+                size={20}
+                className="cursor-pointer opacity-50 hover:opacity-100"
+              />
+            </Link>
+            <Link href={"https://instagram.com/ranqkuty"} target={"blank"}>
+              <FaInstagram
+                size={20}
+                className="cursor-pointer opacity-50 hover:opacity-100"
+              />
+            </Link>
+            <Link href={"mailto:rangkutyibrahim765@gmail.com"} target={"blank"}>
+              <FaEnvelope
+                size={20}
+                className="cursor-pointer opacity-50 hover:opacity-100"
+              />
+            </Link>
           </div>
         </div>
         <div>
