@@ -1,6 +1,7 @@
 import React from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
   const menus = [
@@ -22,6 +23,8 @@ const Navbar = () => {
     },
   ];
 
+  const { asPath } = useRouter();
+
   return (
     <div className="border-b border-slate-200">
       <div className="max-w-[800px] mx-auto my-8 px-4 md:px-0">
@@ -38,7 +41,11 @@ const Navbar = () => {
               <li key={index}>
                 <Link
                   href={menu.href}
-                  className={`hover:bg-text-gradient-primary`}
+                  className={`${
+                    asPath === menu.href
+                      ? "font-semibold bg-text-gradient-primary"
+                      : ""
+                  } hover:bg-text-gradient-primary`}
                 >
                   {menu.label}
                 </Link>
