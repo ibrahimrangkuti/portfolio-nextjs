@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const portfolio = () => {
   return (
@@ -18,19 +19,23 @@ const portfolio = () => {
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 mt-16">
         <div className="aspect-[4/3] w-full h-full shadow-lg rounded cursor-pointer">
-          <Image
-            src="/images/ruangseni.png"
-            width={1200}
-            height={1200}
-            className="w-full object-cover"
-          />
-          <div className="p-4">
-            <h1 className="font-semibold text-lg">RuangSeni</h1>
-            <p className="text-slate-500 my-2">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius
-              saepe placeat aliquid numquam!
-            </p>
-          </div>
+          <Link href="/portfolio/ruangseni">
+            <Image
+              src="/images/ruangseni.png"
+              width={1200}
+              height={1200}
+              className="w-full object-cover"
+            />
+            <div className="p-4">
+              <h1 className="font-semibold text-lg bg-text-gradient-primary">
+                RuangSeni
+              </h1>
+              <p className="text-slate-500 my-2">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius
+                saepe placeat aliquid numquam!
+              </p>
+            </div>
+          </Link>
         </div>
       </div>
     </div>
