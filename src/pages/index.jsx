@@ -1,6 +1,7 @@
 import React from "react";
 import { FaGithub, FaInstagram, FaEnvelope } from "react-icons/fa";
 import PinnedPost from "../components/PinnedPost";
+import Image from "next/image";
 
 const index = () => {
   return (
@@ -36,10 +37,12 @@ const index = () => {
           </div>
         </div>
         <div>
-          <img
-            src="./images/myphoto.jpg"
+          <Image
+            src="/images/myphoto.jpg"
             alt=""
-            className="w-full md:w-[130px] rounded shadow-xl"
+            className="md:w-[130px] rounded-lg shadow-lg"
+            width={500}
+            height={500}
           />
         </div>
       </div>
