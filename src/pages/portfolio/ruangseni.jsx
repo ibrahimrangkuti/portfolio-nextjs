@@ -31,11 +31,18 @@ const ruangseni = () => {
           tempore ullam quo fugit reprehenderit, expedita incidunt? Nostrum
           dolor voluptates quas in illum.
         </p>
-        <p className="text-slate-500">
+        <p className="my-4 text-slate-500">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste,
           laborum debitis odio accusamus vel error, excepturi eum harum, sequi
           itaque dolorem? Ex quo quibusdam aut temporibus voluptatibus possimus
           nulla odit!
+        </p>
+        <p className="my-4 text-slate-500">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+          consectetur consequatur deserunt quos quasi ratione quis unde.
+          Asperiores optio in voluptatem quod aspernatur architecto. Dolor
+          doloremque autem amet sequi debitis quidem ullam temporibus soluta
+          labore nesciunt fuga facilis, eveniet a!
         </p>
         <div className="mt-12 flex justify-center md:justify-start space-x-4">
           <FaHtml5
